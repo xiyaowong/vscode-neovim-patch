@@ -6,6 +6,10 @@ local fn, api = vim.fn, vim.api
 
 local vscode = require 'vscode'
 
+if vim.tbl_contains(vim.tbl_keys(vscode), 'with_insert') then
+  return
+end
+
 vscode.with_insert = function(callback)
   vim.validate { callback = { callback, 'f' } }
 
