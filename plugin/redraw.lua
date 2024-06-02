@@ -23,4 +23,4 @@ local function on_win()
   end, 3000)
 end
 
-vim.api.nvim_set_decoration_provider(ns, { on_win = on_win })
+vim.api.nvim_set_decoration_provider(ns, { on_end = on_win })
