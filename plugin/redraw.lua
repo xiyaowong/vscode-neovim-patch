@@ -20,7 +20,7 @@ local function on_win()
     if redrawed then
       vim.cmd.mode()
     end
-  end, 5000)
+  end, 3000)
 end
 
 vim.api.nvim_set_decoration_provider(ns, { on_end = on_win })
