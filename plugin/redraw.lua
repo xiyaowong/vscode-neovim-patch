@@ -11,14 +11,13 @@ local function redraw()
   if timer and timer:is_active() then
     timer:close()
   end
-  timer = vim.defer_fn(vim.cmd.mode, 50)
+  timer = vim.defer_fn(vim.cmd.mode, 200)
 end
 
 vim.api.nvim_create_autocmd({
   'CursorHold',
   'TextChanged',
   'InsertLeave',
-  'WinScrolled',
 }, {
   callback = redraw,
 })
